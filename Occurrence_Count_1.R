@@ -4,7 +4,6 @@ require(tidyr)
 require(rgbif)
 require(taxize)
 
-
 ## Initial setting
 #library(usethis)
 #usethis::use_git()
