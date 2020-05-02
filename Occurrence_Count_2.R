@@ -62,7 +62,7 @@ save(file = "RData_European_Bee_Species_GBIF_Data.RData", GBIF_Data)
 
 
 ##Patrick code
-### Extracting the decimal coordinates of the occurrences of each european Species from GBIF.
+## Extracting the decimal coordinates of the occurrences of each european Species from GBIF.
 ## have also extended the code to extract extra information from the meta-data that may infrom the data cleaning process
 #for(i in 1:nrow(Species)){
 #  Data <- occ_search(taxonKey = Species[i,2], hasCoordinate = TRUE,hasGeospatialIssue = FALSE,limit = 150000, return = "data")
