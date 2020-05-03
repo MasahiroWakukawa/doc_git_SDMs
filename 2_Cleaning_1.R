@@ -217,7 +217,7 @@ for(i in 1:nrow(Taxon_lim)){
 
 Clean_Data <- CC_Data
 
-save(Clean_Data, file = "RData_European_Bee_Species_Clean_Data.RData") ## save clean data
+save(Clean_Data, file = "../output/RData_European_Bee_Species_Clean_Data.RData") ## save clean data
 
 
 ##Patrick code
@@ -282,5 +282,6 @@ save(Clean_Data, file = "RData_European_Bee_Species_Clean_Data.RData") ## save c
 #  if ((NROW(Clean_Data[[paste(Clean_Data[[i]][["species"]][1],"clean_Data",sep = "_")]])) >= 20){ 
 #    assign(paste(Clean_Data[[i]][["species"]][1],"clean_Data",sep = "_"),Clean_Data[[paste(Clean_Data[[i]][["species"]][1],"clean_Data",sep = "_")]])
 #  }}
+
 #Clean_Data<-setNames(lapply(ls(pattern ="clean_Data*"), function(x) get(x)),(ls(pattern="clean_Data*"))) ### 405 species remain with over 25 occurences after inital cleaning 
 #save(Clean_Data, file = "RData_European_Bee_Species_Clean_Data.RData") ## Save the clean data RData
