@@ -7,14 +7,15 @@ require(sp)
 require(rgdal)
 require(spThin)   ####jeffreyhanson branch for githbud download 
 require(tiff)
-require(gurobi)
 require(doParallel) 
+#require(gurobi)
 #require(devtools)
 #install_github("jeffreyhanson/spThin")
 
 load("../output/RData_European_Bee_Species_Finish_Data.RData")                          ## load finish Data for the thinning process
-
 #load("RData_EUropean_Bee_Species_GBIF_Data.RData")                            ## load GBIF_Data for maps to visualise effects of thinning
+
+
 
 ###Thinning by thin function with 5km distance
 Taxon_lim <- Finish_Data %>% group_by(species, taxonKey) %>% summarise(COUNT=n()) 
@@ -140,7 +141,7 @@ Thinned_Data_5km <- CC_Data %>% filter(taxonKey %in% Bee_Occurrence_Count$CC_Dat
 
 save(file = "../output/RData_European_Bee_Species_Thinned_Data_5km.RData", Thinned_Data_5km)
 
-
+?thin
 
 ### Thinning by thin function with 10km distance
 Taxon_lim <- Finish_Data %>% group_by(species, taxonKey) %>% summarise(COUNT=n()) 
