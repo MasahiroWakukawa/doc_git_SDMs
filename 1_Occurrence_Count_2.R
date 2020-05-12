@@ -4,6 +4,7 @@ require(tidyr)
 require(rgbif)
 require(magrittr)
 
+
 ### Reading real data of bee species
 PREDICTS_Andrenidae <- read.delim("../data/Andrenidae.csv", header = TRUE, stringsAsFactors = FALSE, 
                                   colClasses = c(rep("factor", 1), rep("NULL", 6), rep("factor", 1), rep("NULL", 1), rep("factor", 1), rep("NULL", 1), rep("factor", 1), rep("NULL", 3),
@@ -58,7 +59,7 @@ colnames(PREDICTS)[7:8]<-c("decimallongitude","decimallatitude")
 
 GBIF_Data <- PREDICTS
 
-save(file = "RData_European_Bee_Species_GBIF_Data.RData", GBIF_Data)
+save(file = "../output/RData_European_Bee_Species_GBIF_Data.RData", GBIF_Data)
 
 
 ##Patrick code
