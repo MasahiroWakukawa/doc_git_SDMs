@@ -16,7 +16,6 @@ load("../output/RData_European_Bee_Species_Finish_Data.RData")                  
 #load("RData_EUropean_Bee_Species_GBIF_Data.RData")                            ## load GBIF_Data for maps to visualise effects of thinning
 
 
-
 ###Thinning by thin function with 5km distance
 Taxon_lim <- Finish_Data %>% group_by(species, taxonKey) %>% summarise(COUNT=n()) 
 
